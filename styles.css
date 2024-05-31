@@ -5,7 +5,17 @@ html, body {
 }
 
 header {
-    width: 85%;
+    padding-top: 20px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url('images/bg1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header > .container {
+    width: 80%;
     height: 120px;
     margin: 20px auto;
     padding: 25px;
@@ -15,7 +25,7 @@ header {
 
 .social-icons {
     display: inline;
-    line-height: 170px;
+    line-height: 150px;
 }
 
 .social-icons a {
@@ -30,11 +40,23 @@ header {
     border: 2px solid gray;
     border-radius: 50%;
     padding: 10px;
-    margin: 5px;
+    margin: 1px;
+}
+
+.facebook {
+    background-color: #4a90e2;
+}
+
+.instagram {
+    background-color: #bd10e0;
+}
+
+.whatsapp {
+    background-color: #65b713;
 }
 
 .social-icons img:hover {
-    background-color: rgba(0,0,0,.1);
+    filter: brightness(1.125);
 }
 
 .logo {

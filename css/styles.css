@@ -80,8 +80,8 @@ img[alt="Logo"] {
 /* Navbar */
 /* Add a black background color to the top navigation */
 .topnav {
-    width: 80%;
-    margin: 0px auto;
+    width: 80vw;
+    margin: 45px auto;
     border-radius: 5px;
     background-color: #333;
     overflow: hidden;

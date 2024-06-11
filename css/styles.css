@@ -85,6 +85,7 @@ img[alt="Logo"] {
     border-radius: 5px;
     background-color: #333;
     overflow: hidden;
+    font-variant: small-caps;
 }
 
 /* Style the links inside the navigation bar */

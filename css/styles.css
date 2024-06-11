@@ -116,3 +116,42 @@ img[alt="Logo"] {
 .topnav .icon {
     display: none;
 }
+
+/* MAIN */
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 100vh;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Control the left side */
+.left1 {
+    left: 0;
+    background-color: #667C4D;
+}
+
+/* Control the right side */
+.right1 {
+    right: 0;
+    background-color: #5FACE0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-5%, -50%);
+    text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+    width: 100%;
+    border-radius: 10px;
+}

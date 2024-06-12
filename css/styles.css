@@ -1,3 +1,8 @@
+:root {
+    --bg-futbol: #667C4D;
+    --bg-padel: #5FACE0;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -132,13 +137,13 @@ img[alt="Logo"] {
 /* Control the left side */
 .left1 {
     left: 0;
-    background-color: #667C4D;
+    background-color: var(--bg-futbol);
 }
 
 /* Control the right side */
 .right1 {
     right: 0;
-    background-color: #5FACE0;
+    background-color: var(--bg-padel);
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -154,4 +159,39 @@ img[alt="Logo"] {
 .centered img {
     width: 100%;
     border-radius: 10px;
+}
+
+/* Scroll to top button */
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 20px;
+    /* Place the button 20px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: darkgreen;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
 }

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div class="container">
 
             <!-- Logo -->
@@ -37,17 +37,17 @@
 
         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">inicio</a>
-            <a href="#news">novedades</a>
-            <a href="#contact">contacto</a>
-            <a href="#about">nosotros</a>
+            <a href="javascript:scrollTo Section('inicio')" class="active">inicio</a>
+            <a href="javascript:scrollToSection('novedades')">novedades</a>
+            <a href="javascript:scrollToSection('contacto')">contacto</a>
+            <a href="javascript:scrollToSection('nosotros')">nosotros</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times no-display"></i>
             </a>
         </div>
     </header>
-    <main>
+    <main id="contacto">
         <div class="container">
             <div class="split left1">
                 <div class="centered">
@@ -63,6 +63,11 @@
         </div>
     </main>
     <footer></footer>
+
+    <!-- Botón Scroll to Top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="svg/arrow-up-02-stroke-rounded.svg" alt="Go to top">
+    </button>
 
     <script src="js/scripts.js"></script>
 </body>

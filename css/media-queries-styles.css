@@ -19,9 +19,23 @@
         position: relative;
     }
 
+    .left1 {
+        padding-top: 0;
+    }
+
     .centered {
-        position: relative;
-        transform: translate(50,50);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .centered img {
+        width: 80%;
+        height: 100%;
+        border-radius: 0;
     }
 }
 

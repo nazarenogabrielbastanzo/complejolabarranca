@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media-queries-styles.css">
@@ -16,7 +18,7 @@
 
 <body>
     <header id="top">
-        <div class="container">
+        <div class="container" id="inicio">
 
             <!-- Logo -->
             <a href="#" class="logo">
@@ -37,7 +39,7 @@
 
         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
-            <a href="javascript:scrollTo Section('inicio')" class="active">inicio</a>
+            <a href="javascript:scrollTo Section('inicio')">inicio</a>
             <a href="javascript:scrollToSection('novedades')">novedades</a>
             <a href="javascript:scrollToSection('contacto')">contacto</a>
             <a href="javascript:scrollToSection('nosotros')">nosotros</a>
@@ -63,8 +65,79 @@
         </div>
     </main>
     <footer id="footer" class="footer">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium error dolore eos debitis exercitationem distinctio fuga! Repellendus, placeat? Ex debitis at consequuntur, alias odio totam nostrum optio enim nesciunt? Eaque!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur possimus ullam, quisquam illum maxime, rerum sint temporibus facere suscipit, quia expedita reprehenderit. Maxime deleniti necessitatibus iusto, eaque nobis quas laudantium?
+        <div class="container" id="nosotros">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="javascript:topFunction();">
+                                    <img src="images/logo.png" alt="Logo" />
+                                </a>
+                            </div>
+                            <p>Most of our events have hard and easy route choices as we are always keen to encourage
+                                new riders.</p>
+                            <ul class="social-icons style-4 pull-left">
+                                <li>
+                                    <a href="#">
+                                        <img class="instagram" src="svg/instagram-stroke-rounded.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="whatsapp" src="svg/whatsapp-stroke-rounded.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <h3>Menú</h3>
+                            <ul class="footer-menu">
+                                <li><a href="javascript:scrollToSection('top')">Inicio</a></li>
+                                <li><a href="javascript:scrollToSection('novedades')">Novedades</a></li>
+                                <li><a href="javascript:scrollToSection('nosotros')">Nosotros</a></li>
+                                <li><a href="javascript:scrollToSection('contacto')">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="full">
+                        <div class="footer-widget">
+                            <h3>Contáctenos</h3>
+                            <ul class="address-list">
+                                <li>
+                                    <i class="fa fa-map-marker"></i> Vicente López 599-699, Campana, Provincia de Buenos Aires
+                                </li>
+                                <li><i class="fa fa-phone"></i> +54 9 3489 639983</li>
+                                <li><i class="fa fa-phone"></i> +54 9 3489 537345</li>
+                                <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> labarrancafutbol@gmail.com</li>
+                                <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> labarrancapadel@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="full">
+                        <div class="contact-footer">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13204.427059664784!2d-58.9461371!3d-34.1691879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7222fc9213d1%3A0x64dbc41125980e75!2sComplejo%20La%20Barranca%20Futbol%205!5e0!3m2!1ses!2sar!4v1718272659437!5m2!1ses!2sar"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright &copy; 2024 Complejo La Barranca. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Botón Scroll to Top -->

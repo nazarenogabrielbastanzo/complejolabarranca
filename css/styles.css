@@ -149,14 +149,20 @@ img[alt="Logo"] {
 .left1 {
     left: 0;
     top: 0;
-    background-color: var(--bg-futbol);
+    /* background-color: var(--bg-futbol); */
+    background-image: url('../images/tapiz-futbol.png');
+    background-size: 25px;
+    background-repeat: repeat;
 }
 
 /* Control the right side */
 .right1 {
     right: 0;
     top: 0;
-    background-color: var(--bg-padel);
+    /* background-color: var(--bg-padel); */
+    background-image: url('../images/tapiz-padel.png');
+    background-size: 25px;
+    background-repeat: repeat;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -243,7 +249,8 @@ footer .social-icons {
     font-size: 14px;
 }
 
-.footer-menu li a {
+.footer-menu a,
+.footer-widget a {
     color: #fff;
 }
 
@@ -335,7 +342,7 @@ ul {
 }
 
 /* Scroll to top button */
-#myBtn {
+#myBtn1 {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -364,7 +371,7 @@ ul {
     /* Increase font size */
 }
 
-#myBtn:hover {
+#myBtn1:hover {
     /* background-color: #555; */
     /* Add a dark-grey background on hover */
     filter: brightness(1.5);

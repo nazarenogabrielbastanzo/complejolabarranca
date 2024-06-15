@@ -6,7 +6,7 @@ function scrollToSection(sectionId) {
 
 // Scroll to top button
 //Get the button:
-mybutton = document.getElementById("myBtn");
+mybutton = document.getElementById("myBtn1");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };

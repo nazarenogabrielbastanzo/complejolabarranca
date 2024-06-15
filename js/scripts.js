@@ -78,3 +78,9 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+let copyright = document.querySelector('#copyright');
+let fecha = new Date();
+let anio = fecha.getFullYear();
+
+copyright.textContent = anio;

@@ -138,31 +138,46 @@ img[alt="Logo"] {
 .split {
     height: 100%;
     width: 50%;
-    position: absolute;
+    position: relative;
     z-index: 1;
     top: 100vh;
     overflow-x: hidden;
     padding-top: 20px;
 }
 
+.split::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-image: url('tu-imagen.jpg'); */
+    /* backdrop-filter: blur(5px); */
+}
+
 /* Control the left side */
 .left1 {
+    position: relative;
     left: 0;
     top: 0;
-    /* background-color: var(--bg-futbol); */
-    background-image: url('../images/tapiz-futbol.png');
-    background-size: 25px;
-    background-repeat: repeat;
+    background-color: var(--bg-futbol);
+    /* background-image: url('../images/tapiz-futbol.png'); */
+    /* background-image: url('../images/bg1.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Control the right side */
 .right1 {
+    position: absolute;
     right: 0;
     top: 0;
-    /* background-color: var(--bg-padel); */
-    background-image: url('../images/tapiz-padel.png');
-    background-size: 25px;
-    background-repeat: repeat;
+    background-color: var(--bg-padel);
+    /* background-image: url('../images/tapiz-padel.png'); */
+    /* background-image: url('../images/padel.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -179,6 +194,12 @@ img[alt="Logo"] {
     width: 100%;
     border-radius: 10px;
     object-fit: contain;
+    transition: all 0.5s ease;
+}
+
+.centered img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* FOOTER */

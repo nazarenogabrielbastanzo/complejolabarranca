@@ -77,7 +77,7 @@ btn3.addEventListener('click', () => {
 });
 
 btn4.addEventListener('click', () => {
-    myFunction();
+    // myFunction();
     modalQR.style.display = 'block';
 });
 

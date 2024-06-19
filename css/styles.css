@@ -425,6 +425,11 @@ ul {
     cursor: pointer;
 }
 
+#qrModal img.qr {
+    width: 300px;
+    height: 300px;
+}
+
 /* Add Animation */
 @-webkit-keyframes slideIn {
     from {

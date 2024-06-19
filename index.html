@@ -42,6 +42,7 @@
             <a href="javascript:scrollToSection('top')" onclick="myFunction()">inicio</a>
             <a href="javascript:scrollToSection('nosotros')" onclick="myFunction()">nosotros</a>
             <a href="javascript:scrollToSection('contacto')" onclick="myFunction()">contacto</a>
+            <a href="javascript:void(0);" id="myBtn3">QR</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times no-display"></i>
@@ -100,6 +101,7 @@
                                 <li><a href="javascript:scrollToSection('top')">Inicio</a></li>
                                 <li><a href="javascript:scrollToSection('nosotros')">Nosotros</a></li>
                                 <li><a href="javascript:scrollToSection('contacto')">Contacto</a></li>
+                                <li><a href="javascript:void(0);" id="myBtn4">QR</a></li>
                             </ul>
                         </div>
                     </div>
@@ -159,6 +161,18 @@
             <p class="padel">
                 <a href="https://wa.me/+543489537345" target="_blank">+54 9 3489 537345 (Pádel)</a>
             </p>
+        </div>
+
+    </div>
+
+    <!-- The QR Modal -->
+    <div id="qrModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://www.complejolabarranca.com.ar/" alt="Código QR"/> -->
+            <img class="qr" src="images/qrcode.png" alt="Código QR"/>
         </div>
 
     </div>

@@ -1,3 +1,9 @@
+let copyright = document.querySelector('#copyright');
+let fecha = new Date();
+let anio = fecha.getFullYear();
+
+copyright.textContent = anio;
+
 // Función para hacer scroll suave hacia una sección
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -82,27 +88,30 @@ btn4.addEventListener('click', () => {
 });
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+function ocultarModal() {
     modal.style.display = "none";
+    modalQR.style.display = 'none';
 }
 
-span2.onclick = function () {
-    modalQR.style.display = "none";
-}
+span.addEventListener('click', ocultarModal);
+
+span2.addEventListener('click', ocultarModal);
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.addEventListener('click', function (event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        ocultarModal();
     }
 
     if (event.target == modalQR) {
-        modalQR.style.display = "none";
+        ocultarModal();
     }
-}
+});
 
-let copyright = document.querySelector('#copyright');
-let fecha = new Date();
-let anio = fecha.getFullYear();
+window.addEventListener('keydown', (event) => {
+    // console.log(`Key pressed: ${event.key} (code: ${event.code})`);
 
-copyright.textContent = anio;
+    if (event.key === 'Escape') {
+        ocultarModal();
+    }
+});

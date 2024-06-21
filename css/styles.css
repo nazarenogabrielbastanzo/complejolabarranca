@@ -88,6 +88,10 @@ img[alt="Logo"] {
 
 /* Navbar */
 /* Add a black background color to the top navigation */
+#myTopnav {
+    transition: all .25s;
+}
+
 .topnav {
     width: 80vw;
     margin: 45px auto;
@@ -511,4 +515,12 @@ ul {
     /* background-color: #555; */
     /* Add a dark-grey background on hover */
     filter: brightness(1.5);
+}
+
+.fixed {
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    top: 0;
+    margin: 0;
 }

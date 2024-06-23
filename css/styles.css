@@ -103,6 +103,10 @@ img[alt="Logo"] {
 }
 
 /* Style the links inside the navigation bar */
+.topnav a:first-child {
+    display: none;
+}
+
 .topnav a {
     float: left;
     display: block;

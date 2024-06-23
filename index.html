@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <header id="top">
+    <header id="inicio">
         <div class="container">
 
             <!-- Logo -->
-            <a href="javascript:scrollToSection('top')" class="logo">
+            <a href="javascript:scrollToSection('inicio')" class="logo">
                 <img src="images/logo.png" alt="Logo">
             </a>
 
@@ -40,9 +40,10 @@
         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
             <div id="menu">
-                <a href="javascript:scrollToSection('top')" onclick="myFunction(false, true)">inicio</a>
-                <a href="javascript:scrollToSection('nosotros')" onclick="myFunction(false, true)">nosotros</a>
-                <a href="javascript:scrollToSection('contacto')" onclick="myFunction(false, true)">contacto</a>
+                <a href="javascript:void(0);" onclick="myFunction(true, true);">&nbsp;</a>
+                <a href="#inicio" onclick="myFunction(true,true)" id="aInicio">inicio</a>
+                <a href="#nosotros" onclick="myFunction(true, true)" id="aNosotros">nosotros</a>
+                <a href="#contacto" onclick="myFunction(true, true)" id="aContacto">contacto</a>
                 <a href="javascript:void(0);" id="myBtn3" onclick="myFunction(true, true)">QR</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction(true, true)">
@@ -100,7 +101,7 @@
                         <div class="footer-widget">
                             <h3>Menú</h3>
                             <ul class="footer-menu">
-                                <li><a href="javascript:scrollToSection('top')">Inicio</a></li>
+                                <li><a href="javascript:scrollToSection('inicio')">Inicio</a></li>
                                 <li><a href="javascript:scrollToSection('nosotros')">Nosotros</a></li>
                                 <li><a href="javascript:scrollToSection('contacto')">Contacto</a></li>
                                 <li><a href="javascript:void(0);" id="myBtn4">QR</a></li>

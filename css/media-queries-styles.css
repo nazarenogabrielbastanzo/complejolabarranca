@@ -13,7 +13,7 @@
         flex-direction: column;
     }
     
-    .topnav a:not(:first-child) {
+    .topnav a {
         display: none;
     }
 

@@ -96,7 +96,7 @@ img[alt="Logo"] {
 .topnav {
     width: 80vw;
     margin: 45px auto;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #333;
     overflow: hidden;
     font-variant: small-caps;
@@ -528,4 +528,5 @@ ul {
     width: 100vw;
     top: 0;
     margin: 0;
+    border-radius: 0 0 10px 10px;
 }

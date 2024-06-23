@@ -40,10 +40,10 @@
         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
             <div id="menu">
-                <a href="javascript:void(0);" onclick="myFunction(true, true);">&nbsp;</a>
-                <a href="#inicio" onclick="myFunction(true,true)" id="aInicio">inicio</a>
-                <a href="#nosotros" onclick="myFunction(true, true)" id="aNosotros">nosotros</a>
-                <a href="#contacto" onclick="myFunction(true, true)" id="aContacto">contacto</a>
+                <a href="javascript:void(0);" onclick="myFunction(true, true);">inicio</a>
+                <a href="#inicio" onclick="myFunction(true,true); colocarClaseActiva(this);" id="aInicio">inicio</a>
+                <a href="#contacto" onclick="myFunction(true, true); colocarClaseActiva(this);" id="aContacto">contacto</a>
+                <a href="#nosotros" onclick="myFunction(true, true); colocarClaseActiva(this);" id="aNosotros">nosotros</a>
                 <a href="javascript:void(0);" id="myBtn3" onclick="myFunction(true, true)">QR</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction(true, true)">
@@ -76,7 +76,7 @@
                     <div class="full">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="javascript:topFunction();">
+                                <a href="#inicio">
                                     <img src="images/logo.png" alt="Logo" />
                                 </a>
                             </div>
@@ -101,9 +101,9 @@
                         <div class="footer-widget">
                             <h3>Menú</h3>
                             <ul class="footer-menu">
-                                <li><a href="javascript:scrollToSection('inicio')">Inicio</a></li>
-                                <li><a href="javascript:scrollToSection('nosotros')">Nosotros</a></li>
-                                <li><a href="javascript:scrollToSection('contacto')">Contacto</a></li>
+                                <li><a href="#inicio">Inicio</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                                <li><a href="#nosotros">Nosotros</a></li>
                                 <li><a href="javascript:void(0);" id="myBtn4">QR</a></li>
                             </ul>
                         </div>

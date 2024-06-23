@@ -1,4 +1,11 @@
+const aInicio = document.getElementById('aInicio');
+const aNosotros = document.getElementById('aNosotros');
+const aContacto = document.getElementById('aContacto');
+const inicio = document.getElementById('inicio');
+const nosotros = document.getElementById('nosotros');
+const contacto = document.getElementById("contacto");
 let myTopnav = document.querySelector('#myTopnav');
+const firstAnchor = document.querySelector('#myTopnav a:first-child');
 let menuIconBars = document.querySelector("#myTopnav .fa-bars");
 let menuIconTimes = document.querySelector("#myTopnav .fa-times");
 
@@ -48,16 +55,18 @@ function topFunction() {
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction(switchNav, switchMenuIcon) {
+    firstAnchor.innerHTML = '&nbsp;';
 
-    if (switchMenuIcon) {
-        if (menuIconBars.className === "fa fa-bars") {
-            menuIconBars.className += " no-display";
-            menuIconTimes.className = "fa fa-times";
-        } else {
-            menuIconBars.className = "fa fa-bars";
-            menuIconTimes.className += " no-display";
-        }
-    }
+    // if (switchMenuIcon) {
+    //     if (menuIconBars.className === "fa fa-bars") {
+    //         menuIconBars.className += " no-display";
+    //         menuIconTimes.className = "fa fa-times";
+    //         firstAnchor.textContent = '';
+    //     } else {
+    //         menuIconBars.className = "fa fa-bars";
+    //         menuIconTimes.className += " no-display";
+    //     }
+    // }
 
     switchNav ? switchTopnav() : undefined;
 }
@@ -67,7 +76,7 @@ function switchTopnav() {
     if (x.className === "topnav") {
         x.className = "topnav responsive";
     } else if (x.className === 'topnav responsive') {
-        x.className = "topnav";
+        x.className = "topnav";       
     } else if (x.className === 'topnav fixed') {
         x.className = 'topnav fixed responsive';
     } else {
@@ -99,7 +108,7 @@ btn2.addEventListener('click', () => {
 });
 
 btn3.addEventListener('click', () => {
-    myFunction();
+    // myFunction();
     modalQR.style.display = 'block';
 });
 
@@ -136,3 +145,61 @@ window.addEventListener('keydown', (event) => {
         ocultarModal();
     }
 });
+
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    const rectInicio = inicio.getBoundingClientRect();
+    const rectNosotros = nosotros.getBoundingClientRect();
+    const rectContacto = contacto.getBoundingClientRect();
+
+    const posicionInicio = rectInicio.top + window.scrollY;
+    const posicionNosotros = rectNosotros.top + window.scrollY;
+    const posicionContacto = rectContacto.top + window.scrollY;
+
+
+    if (scrollPosition >= posicionContacto && scrollPosition < posicionNosotros) {
+        // Realiza la acción cuando el scroll coincide con la posición del elemento.
+
+        firstAnchor.textContent = aContacto.textContent;
+
+        aInicio.className = '';
+        aContacto.className = 'active';
+        aNosotros.className = '';
+    } else if (scrollPosition >= posicionNosotros) {
+        firstAnchor.textContent = aNosotros.textContent;
+
+        aInicio.className = '';
+        aContacto.className = '';
+        aNosotros.className = 'active'
+    } else if (scrollPosition >= posicionInicio) {
+        firstAnchor.textContent = aInicio.textContent;
+
+        aInicio.className = 'active';
+        aContacto.className = '';
+        aNosotros.className = '';
+    } else {
+        firstAnchor.textContent = 'inicio';
+    }
+
+});
+
+function colocarClaseActiva(elem) {
+    setTimeout(()=> {
+        let currentPath = window.location.href;
+        // console.log(currentPath);
+
+        aInicio.className = '';
+        aContacto.className = '';
+        aNosotros.className = '';
+        
+        if (currentPath.indexOf(`#${elem.textContent}`) != -1) {
+            elem.className = 'active';
+            firstAnchor.innerHTML = elem.innerHTML;
+        } else {
+            elem.className = '';
+        }
+    }, 800);
+
+}

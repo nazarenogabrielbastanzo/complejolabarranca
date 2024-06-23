@@ -89,6 +89,7 @@ img[alt="Logo"] {
 /* Navbar */
 /* Add a black background color to the top navigation */
 #myTopnav {
+    position: relative;
     transition: all .25s;
 }
 

@@ -1,3 +1,7 @@
+let myTopnav = document.querySelector('#myTopnav');
+let menuIconBars = document.querySelector("#myTopnav .fa-bars");
+let menuIconTimes = document.querySelector("#myTopnav .fa-times");
+
 let copyright = document.querySelector('#copyright');
 let fecha = new Date();
 let anio = fecha.getFullYear();
@@ -18,7 +22,6 @@ mybutton = document.getElementById("myBtn1");
 window.onscroll = scrollFunction;
 
 function scrollFunction() {
-    let topNav = document.querySelector('#myTopnav');
 
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -27,9 +30,11 @@ function scrollFunction() {
     }
 
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topNav.className += ' fixed';
+        myTopnav.className = 'topnav fixed';
+        myTopnav.style.position = 'fixed';
     } else {
-        topNav.className = 'topnav'
+        myTopnav.className = 'topnav';
+        myTopnav.style.position = 'relative';
     }
 }
 
@@ -42,23 +47,31 @@ function topFunction() {
 
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    let menuIconBars = document.querySelector("#myTopnav .fa-bars");
-    let menuIconTimes = document.querySelector("#myTopnav .fa-times");
+function myFunction(switchNav, switchMenuIcon) {
 
-    if (menuIconBars.className === "fa fa-bars") {
-        menuIconBars.className += " no-display";
-        menuIconTimes.className = "fa fa-times";
-    } else {
-        menuIconBars.className = "fa fa-bars";
-        menuIconTimes.className += " no-display";
+    if (switchMenuIcon) {
+        if (menuIconBars.className === "fa fa-bars") {
+            menuIconBars.className += " no-display";
+            menuIconTimes.className = "fa fa-times";
+        } else {
+            menuIconBars.className = "fa fa-bars";
+            menuIconTimes.className += " no-display";
+        }
     }
 
+    switchNav ? switchTopnav() : '';
+}
+
+function switchTopnav() {
+    var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
+        x.className = "topnav responsive";
+    } else if (x.className === 'topnav responsive') {
         x.className = "topnav";
+    } else if (x.className === 'topnav fixed') {
+        x.className = 'topnav fixed responsive';
+    } else {
+        x.className = 'topnav fixed';
     }
 }
 

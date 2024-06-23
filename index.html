@@ -18,7 +18,7 @@
 
 <body>
     <header id="top">
-        <div class="container" id="inicio">
+        <div class="container">
 
             <!-- Logo -->
             <a href="javascript:scrollToSection('top')" class="logo">
@@ -39,11 +39,13 @@
 
         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
-            <a href="javascript:scrollToSection('top')" onclick="myFunction()">inicio</a>
-            <a href="javascript:scrollToSection('nosotros')" onclick="myFunction()">nosotros</a>
-            <a href="javascript:scrollToSection('contacto')" onclick="myFunction()">contacto</a>
-            <a href="javascript:void(0);" id="myBtn3">QR</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <div id="menu">
+                <a href="javascript:scrollToSection('top')" onclick="myFunction(false, true)">inicio</a>
+                <a href="javascript:scrollToSection('nosotros')" onclick="myFunction(false, true)">nosotros</a>
+                <a href="javascript:scrollToSection('contacto')" onclick="myFunction(false, true)">contacto</a>
+                <a href="javascript:void(0);" id="myBtn3" onclick="myFunction(true, true)">QR</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction(true, true)">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times no-display"></i>
             </a>

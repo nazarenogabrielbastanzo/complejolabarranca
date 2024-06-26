@@ -190,11 +190,9 @@ window.addEventListener('scroll', () => {
     } else if (scrollPosition >= posicionNosotros) {
         firstAnchor.textContent = aNosotros.textContent;
         colocarClaseActiva(aNosotros);
-    } else if (scrollPosition >= posicionInicio) {
+    } else {
         firstAnchor.textContent = aInicio.textContent;
         colocarClaseActiva(aInicio);
-    } else {
-        firstAnchor.textContent = 'inicio'.toUpperCase();
     }
 
     let scrollHeight = document.documentElement.scrollHeight;

@@ -173,6 +173,13 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
+function changeUrlWhitoutRefresh(section) {
+    if (currentPath.indexOf('#')) {
+        const nuevoURL = `${currentPath.slice(currentPath.indexOf('#'), 1)}#${section}`;
+        history.pushState({}, '', nuevoURL);
+    }
+}
+
 function setActiveClassOnScroll() {
     const scrollPosition = window.scrollY;
 
@@ -230,4 +237,5 @@ function colocarClaseActiva(elem = '') {
     elItem.classList.add('active');
     firstAnchor.textContent = elItem.textContent.toUpperCase();
     document.title = `${firstAnchor.textContent.charAt(0).toUpperCase()}${firstAnchor.textContent.substring(1).toLowerCase()} - Complejo La Barranca`;
+    changeUrlWhitoutRefresh(firstAnchor.textContent.toLowerCase());
 }

@@ -25,10 +25,8 @@ let menuIconBars = document.querySelector("#myTopnav .fa-bars");
 let menuIconTimes = document.querySelector("#myTopnav .fa-times");
 
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        setAnio();
-        colocarClaseActiva();
-    }, 800);
+    setAnio();
+    colocarClaseActiva();
 });
 
 function setAnio() {
@@ -185,13 +183,10 @@ window.addEventListener('scroll', () => {
 
 
     if (scrollPosition >= posicionContacto && scrollPosition < posicionNosotros) {
-        firstAnchor.textContent = aContacto.textContent;
         colocarClaseActiva(aContacto);
     } else if (scrollPosition >= posicionNosotros) {
-        firstAnchor.textContent = aNosotros.textContent;
         colocarClaseActiva(aNosotros);
     } else {
-        firstAnchor.textContent = aInicio.textContent;
         colocarClaseActiva(aInicio);
     }
 

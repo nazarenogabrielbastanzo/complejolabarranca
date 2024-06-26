@@ -2,6 +2,9 @@ let currentPath = window.location.href;
 
 let activeLinkId = currentPath.substring(currentPath.indexOf('#') + 1);
 
+let scrollHeight = document.documentElement.scrollHeight;
+let scrollPosition1 = window.innerHeight + window.scrollY;
+
 const aInicio = document.getElementById('ainicio');
 const aNosotros = document.getElementById('anosotros');
 const aContacto = document.getElementById('acontacto');
@@ -132,15 +135,15 @@ btn2.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
-btn3.addEventListener('click', () => {
-    // myFunction();
-    modalQR.style.display = 'block';
-});
+// btn3.addEventListener('click', () => {
+//     // myFunction();
+//     modalQR.style.display = 'block';
+// });
 
-btn4.addEventListener('click', () => {
-    // myFunction();
-    modalQR.style.display = 'block';
-});
+// btn4.addEventListener('click', () => {
+//     // myFunction();
+//     modalQR.style.display = 'block';
+// });
 
 // When the user clicks on <span> (x), close the modal
 function ocultarModal() {
@@ -197,8 +200,7 @@ window.addEventListener('scroll', () => {
         firstAnchor.textContent = 'inicio'.toUpperCase();
     }
 
-    let scrollHeight = document.documentElement.scrollHeight;
-    let scrollPosition1 = window.innerHeight + window.scrollY;
+
     if ((scrollHeight - scrollPosition1) / scrollHeight === 0) {
         // alert("¡Has llegado al final de la página!");
         colocarClaseActiva(aNosotros);
@@ -228,6 +230,8 @@ function colocarClaseActiva(elem = '') {
 
         }
 
+    } else {
+        elItem = document.getElementById(`a${elItem.textContent.toLowerCase()}`);
     }
 
     elItem.classList.add('active');

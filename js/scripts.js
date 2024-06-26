@@ -1,19 +1,44 @@
-const aInicio = document.getElementById('aInicio');
-const aNosotros = document.getElementById('aNosotros');
-const aContacto = document.getElementById('aContacto');
+let currentPath = window.location.href;
+
+let activeLinkId = currentPath.substring(currentPath.indexOf('#') + 1);
+
+const aInicio = document.getElementById('ainicio');
+const aNosotros = document.getElementById('anosotros');
+const aContacto = document.getElementById('acontacto');
+
+let myMenu = [
+    aInicio,
+    aContacto,
+    aNosotros
+];
+
 const inicio = document.getElementById('inicio');
 const nosotros = document.getElementById('nosotros');
 const contacto = document.getElementById("contacto");
+
 let myTopnav = document.querySelector('#myTopnav');
+
 const firstAnchor = document.querySelector('#myTopnav a:first-child');
+
 let menuIconBars = document.querySelector("#myTopnav .fa-bars");
+
 let menuIconTimes = document.querySelector("#myTopnav .fa-times");
 
-let copyright = document.querySelector('#copyright');
-let fecha = new Date();
-let anio = fecha.getFullYear();
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        setAnio();
+        colocarClaseActiva();
+    }, 800);
+});
 
-copyright.textContent = anio;
+function setAnio() {
+    let copyright = document.querySelector('#copyright');
+    let fecha = new Date();
+    let anio = fecha.getFullYear();
+    copyright.textContent = anio;
+}
+
+
 
 // Función para hacer scroll suave hacia una sección
 function scrollToSection(sectionId) {
@@ -76,7 +101,7 @@ function switchTopnav() {
     if (x.className === "topnav") {
         x.className = "topnav responsive";
     } else if (x.className === 'topnav responsive') {
-        x.className = "topnav";       
+        x.className = "topnav";
     } else if (x.className === 'topnav fixed') {
         x.className = 'topnav fixed responsive';
     } else {
@@ -160,46 +185,46 @@ window.addEventListener('scroll', () => {
 
 
     if (scrollPosition >= posicionContacto && scrollPosition < posicionNosotros) {
-        // Realiza la acción cuando el scroll coincide con la posición del elemento.
-
         firstAnchor.textContent = aContacto.textContent;
-
-        aInicio.className = '';
-        aContacto.className = 'active';
-        aNosotros.className = '';
+        colocarClaseActiva(aContacto);
     } else if (scrollPosition >= posicionNosotros) {
         firstAnchor.textContent = aNosotros.textContent;
-
-        aInicio.className = '';
-        aContacto.className = '';
-        aNosotros.className = 'active'
+        colocarClaseActiva(aNosotros);
     } else if (scrollPosition >= posicionInicio) {
         firstAnchor.textContent = aInicio.textContent;
-
-        aInicio.className = 'active';
-        aContacto.className = '';
-        aNosotros.className = '';
+        colocarClaseActiva(aInicio);
     } else {
         firstAnchor.textContent = 'inicio';
     }
 
 });
 
-function colocarClaseActiva(elem) {
-    setTimeout(()=> {
-        let currentPath = window.location.href;
-        // console.log(currentPath);
+function colocarClaseActiva(elem = '') {
 
-        aInicio.className = '';
-        aContacto.className = '';
-        aNosotros.className = '';
-        
-        if (currentPath.indexOf(`#${elem.textContent}`) != -1) {
-            elem.className = 'active';
-            firstAnchor.innerHTML = elem.innerHTML;
-        } else {
-            elem.className = '';
+    let elItem;
+
+    aInicio.className = '';
+    aContacto.className = '';
+    aNosotros.className = '';
+
+    if (!elem) {
+
+        for (item of myMenu) {
+
+            item = item.textContent.toLowerCase();
+
+            if (activeLinkId === item) {
+                elItem = document.getElementById(`a${item}`);
+            } else {
+                elItem = aInicio;
+            }
+
         }
-    }, 800);
 
+    } else {
+        elItem = elem;
+    }
+
+    elItem.className = 'active';
+    firstAnchor.textContent = elItem.textContent;
 }

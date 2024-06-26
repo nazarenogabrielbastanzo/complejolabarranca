@@ -194,22 +194,29 @@ window.addEventListener('scroll', () => {
         firstAnchor.textContent = aInicio.textContent;
         colocarClaseActiva(aInicio);
     } else {
-        firstAnchor.textContent = 'inicio';
+        firstAnchor.textContent = 'inicio'.toUpperCase();
+    }
+
+    let scrollHeight = document.documentElement.scrollHeight;
+    let scrollPosition1 = window.innerHeight + window.scrollY;
+    if ((scrollHeight - scrollPosition1) / scrollHeight === 0) {
+        // alert("¡Has llegado al final de la página!");
+        colocarClaseActiva(aNosotros);
     }
 
 });
 
 function colocarClaseActiva(elem = '') {
 
-    let elItem;
+    let elItem = elem;
 
-    aInicio.className = '';
-    aContacto.className = '';
-    aNosotros.className = '';
+    for (let item of myMenu) {
+        item.classList.remove('active');
+    }
 
     if (!elem) {
 
-        for (item of myMenu) {
+        for (let item of myMenu) {
 
             item = item.textContent.toLowerCase();
 
@@ -221,10 +228,8 @@ function colocarClaseActiva(elem = '') {
 
         }
 
-    } else {
-        elItem = elem;
     }
 
-    elItem.className = 'active';
-    firstAnchor.textContent = elItem.textContent;
+    elItem.classList.add('active');
+    firstAnchor.textContent = elItem.textContent.toUpperCase();
 }

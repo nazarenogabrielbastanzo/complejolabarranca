@@ -229,4 +229,5 @@ function colocarClaseActiva(elem = '') {
 
     elItem.classList.add('active');
     firstAnchor.textContent = elItem.textContent.toUpperCase();
+    document.title = `${firstAnchor.textContent.charAt(0).toUpperCase()}${firstAnchor.textContent.substring(1).toLowerCase()} - Complejo La Barranca`;
 }

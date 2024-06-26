@@ -175,7 +175,7 @@ window.addEventListener('keydown', (event) => {
 
 function changeUrlWhitoutRefresh(section) {
     if (currentPath.indexOf('#')) {
-        const nuevoURL = `${currentPath.slice(currentPath.indexOf('#'), 1)}#${section}`;
+        let nuevoURL = `#${section}`;
         history.pushState({}, '', nuevoURL);
     }
 }

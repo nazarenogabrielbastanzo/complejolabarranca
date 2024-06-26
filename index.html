@@ -18,38 +18,41 @@
 
 <body>
     <header id="inicio">
-        <div class="container">
+        <div class="overlay">
 
-            <!-- Logo -->
-            <a href="javascript:scrollToSection('inicio')" class="logo">
-                <img src="images/logo.png" alt="Logo">
-            </a>
+            <div class="container">
 
-            <!-- Social icons -->
-            <div class="social-icons right">
-                <a href="https://www.instagram.com/complejolabarranca" target="_blank">
-                    <img class="instagram" src="svg/instagram-stroke-rounded.svg" alt="">
+                <!-- Logo -->
+                <a href="javascript:scrollToSection('inicio')" class="logo">
+                    <img src="images/logo.png" alt="Logo">
                 </a>
-                <a href="javascript:void(0)" id="myBtn">
-                    <img class="whatsapp" src="svg/whatsapp-stroke-rounded.svg" alt="">
-                </a>
+
+                <!-- Social icons -->
+                <div class="social-icons right">
+                    <a href="https://www.instagram.com/complejolabarranca" target="_blank">
+                        <img class="instagram" src="svg/instagram-stroke-rounded.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" id="myBtn">
+                        <img class="whatsapp" src="svg/whatsapp-stroke-rounded.svg" alt="">
+                    </a>
+                </div>
+
             </div>
 
-        </div>
-
-        <!-- Navbar -->
-        <div class="topnav" id="myTopnav">
-            <div id="menu">
-                <a href="javascript:void(0);" onclick="myFunction(true, true);">inicio</a>
-                <a href="#inicio" onclick="myFunction(true,true);" id="ainicio">inicio</a>
-                <a href="#contacto" onclick="myFunction(true, true);" id="acontacto">contacto</a>
-                <a href="#nosotros" onclick="myFunction(true, true);" id="anosotros">nosotros</a>
-                <!-- <a href="javascript:void(0);" id="myBtn3" onclick="myFunction(true, true)">QR</a> -->
+            <!-- Navbar -->
+            <div class="topnav" id="myTopnav">
+                <div id="menu">
+                    <a href="javascript:void(0);" onclick="myFunction(true, true);">inicio</a>
+                    <a href="#inicio" onclick="myFunction(true,true);" id="ainicio">inicio</a>
+                    <a href="#contacto" onclick="myFunction(true, true);" id="acontacto">contacto</a>
+                    <a href="#nosotros" onclick="myFunction(true, true);" id="anosotros">nosotros</a>
+                    <!-- <a href="javascript:void(0);" id="myBtn3" onclick="myFunction(true, true)">QR</a> -->
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction(true, true)">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times no-display"></i>
+                </a>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction(true, true)">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times no-display"></i>
-            </a>
         </div>
     </header>
     <main>
@@ -80,7 +83,10 @@
                                     <img src="images/logo.png" alt="Logo" />
                                 </a>
                             </div>
-                            <p>Descubrí la pasión por el deporte en <br>Complejo La Barranca: canchas de fútbol y pádel, vestuarios con duchas, buffet con snacks, bebidas y áreas para comer. <br>Todo con excelente iluminación, calefacción, ventilación y estacionamiento. <br>¡Tu lugar para el deporte y la diversión!</p>
+                            <p>Descubrí la pasión por el deporte en <br>Complejo La Barranca: canchas de fútbol y pádel,
+                                vestuarios con duchas, buffet con snacks, bebidas y áreas para comer. <br>Todo con
+                                excelente iluminación, calefacción, ventilación y estacionamiento. <br>¡Tu lugar para el
+                                deporte y la diversión!</p>
                             <ul class="social-icons style-4 pull-left">
                                 <li>
                                     <a href="https://www.instagram.com/complejolabarranca" target="_blank">
@@ -175,7 +181,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <!-- <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://www.complejolabarranca.com.ar/" alt="Código QR"/> -->
-            <img class="qr" src="images/qrcode.png" alt="Código QR"/>
+            <img class="qr" src="images/qrcode.png" alt="Código QR" />
         </div>
 
     </div>

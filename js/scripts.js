@@ -26,7 +26,7 @@ let menuIconTimes = document.querySelector("#myTopnav .fa-times");
 
 window.addEventListener('load', () => {
     setAnio();
-    colocarClaseActiva();
+    setActiveClassOnScroll();
 });
 
 function setAnio() {
@@ -78,7 +78,11 @@ function topFunction() {
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction(switchNav, switchMenuIcon) {
-    firstAnchor.innerHTML = '&nbsp;';
+    if (firstAnchor.innerHTML !== '&nbsp;') {
+        firstAnchor.innerHTML = '&nbsp;';
+    } else {
+        setActiveClassOnScroll();
+    }
 
     // if (switchMenuIcon) {
     //     if (menuIconBars.className === "fa fa-bars") {
@@ -169,15 +173,14 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
-
-window.addEventListener('scroll', () => {
+function setActiveClassOnScroll() {
     const scrollPosition = window.scrollY;
 
-    const rectInicio = inicio.getBoundingClientRect();
+    // const rectInicio = inicio.getBoundingClientRect();
     const rectNosotros = nosotros.getBoundingClientRect();
     const rectContacto = contacto.getBoundingClientRect();
 
-    const posicionInicio = rectInicio.top + window.scrollY;
+    // const posicionInicio = rectInicio.top + window.scrollY;
     const posicionNosotros = rectNosotros.top + window.scrollY;
     const posicionContacto = rectContacto.top + window.scrollY;
 
@@ -196,8 +199,9 @@ window.addEventListener('scroll', () => {
         // alert("¡Has llegado al final de la página!");
         colocarClaseActiva(aNosotros);
     }
+}
 
-});
+window.addEventListener('scroll', setActiveClassOnScroll);
 
 function colocarClaseActiva(elem = '') {
 

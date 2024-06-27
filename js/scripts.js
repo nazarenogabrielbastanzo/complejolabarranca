@@ -134,15 +134,15 @@ btn2.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
-// btn3.addEventListener('click', () => {
-//     // myFunction();
-//     modalQR.style.display = 'block';
-// });
+btn3.addEventListener('click', () => {
+    // myFunction();
+    modalQR.style.display = 'block';
+});
 
-// btn4.addEventListener('click', () => {
-//     // myFunction();
-//     modalQR.style.display = 'block';
-// });
+btn4.addEventListener('click', () => {
+    // myFunction();
+    modalQR.style.display = 'block';
+});
 
 // When the user clicks on <span> (x), close the modal
 function ocultarModal() {

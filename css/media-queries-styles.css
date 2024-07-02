@@ -64,6 +64,11 @@
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
 
+    .responsive {
+        animation-name: fadeIn;
+        animation-duration: .7s;
+    }
+
     .topnav.responsive a.icon {
         position: absolute;
         right: 0;
@@ -80,5 +85,15 @@
 @media screen and (max-width: 320px) {
     .logo img {
         width: 100px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

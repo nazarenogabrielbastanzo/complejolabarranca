@@ -8,6 +8,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
 }
 
 html,
@@ -296,7 +297,7 @@ a,
 }
 
 footer a:hover {
-    color: var(--bg-padel);
+    text-shadow: 0 0 20px white;
 }
 
 .address-list {

@@ -118,8 +118,8 @@ let modalQR = document.querySelector('#qrModal');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 let btn2 = document.getElementById('myBtn2');
-let btn3 = document.querySelector('#myBtn3');
-let btn4 = document.querySelector('#myBtn4');
+// let btn3 = document.querySelector('#myBtn3');
+// let btn4 = document.querySelector('#myBtn4');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -134,15 +134,15 @@ btn2.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
-btn3.addEventListener('click', () => {
-    // myFunction();
-    modalQR.style.display = 'block';
-});
+// btn3.addEventListener('click', () => {
+//     // myFunction();
+//     modalQR.style.display = 'block';
+// });
 
-btn4.addEventListener('click', () => {
-    // myFunction();
-    modalQR.style.display = 'block';
-});
+// btn4.addEventListener('click', () => {
+//     // myFunction();
+//     modalQR.style.display = 'block';
+// });
 
 // When the user clicks on <span> (x), close the modal
 function ocultarModal() {

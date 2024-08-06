@@ -96,7 +96,7 @@ img[alt="Logo"] {
     width: 80vw;
     margin: 45px auto;
     border-radius: 10px;
-    background-color: #333;
+    background: linear-gradient(to right, rgba(51, 51, 51, 1), rgba(51, 51, 51, .3));
     overflow: hidden;
     font-variant: small-caps;
 }

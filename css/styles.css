@@ -135,7 +135,7 @@ img[alt="Logo"] {
 }
 
 /* MAIN */
-#contacto {
+main>div:first-child {
     position: relative;
     max-width: 100vw;
     height: 100vh;

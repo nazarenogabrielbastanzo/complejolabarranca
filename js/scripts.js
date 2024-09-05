@@ -126,13 +126,13 @@ var span = document.getElementsByClassName("close")[0];
 let span2 = document.querySelector('#qrModal .close');
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// }
 
-btn2.addEventListener('click', () => {
-    modal.style.display = 'block';
-});
+// btn2.addEventListener('click', () => {
+//     modal.style.display = 'block';
+// });
 
 // btn3.addEventListener('click', () => {
 //     // myFunction();
@@ -190,10 +190,10 @@ function setActiveClassOnScroll() {
     const posicionContacto = rectContacto.top + window.scrollY;
 
 
-    if (scrollPosition >= posicionContacto && scrollPosition < posicionNosotros) {
-        colocarClaseActiva(aContacto);
-    } else if (scrollPosition >= posicionNosotros) {
+    if (scrollPosition >= posicionNosotros && scrollPosition < posicionContacto) {
         colocarClaseActiva(aNosotros);
+    } else if (scrollPosition >= posicionContacto) {
+        colocarClaseActiva(aContacto);
     } else {
         colocarClaseActiva(aInicio);
     }
@@ -202,7 +202,7 @@ function setActiveClassOnScroll() {
     let scrollPosition1 = window.innerHeight + window.scrollY;
     if ((scrollHeight - scrollPosition1) / scrollHeight === 0) {
         // alert("¡Has llegado al final de la página!");
-        colocarClaseActiva(aNosotros);
+        colocarClaseActiva(aContacto);
     }
 }
 
